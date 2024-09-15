@@ -29,7 +29,7 @@
   };
   ### ----------------BOOT------------------- ###
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/014E-6A35";
+    device = "/dev/disk/by-uuid/B204-4A85";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -54,7 +54,7 @@
     ];
   };
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/20e72414-2ceb-45aa-97a1-9ac121ad7b4c";
+    device = "/dev/disk/by-uuid/3ad6e4fe-ddb6-472d-9cd8-5ba838c73012";
     fsType = "ext4";
   };
   swapDevices = [
