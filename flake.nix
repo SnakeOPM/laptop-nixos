@@ -13,7 +13,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     master.url = "github:nixos/nixpkgs/master"; # Only for debug purposes e.g. nix run
+    nixpkgs-23_11.url = "github:nixos/nixpkgs/nixos-23.11"; # for ibus
+    nixpkgs-23_05.url = "github:nixos/nixpkgs/nixos-23.05"; # for ibus
     ### --- nixpkgs channels --- ###
+    darwin.url = "github:lnl7/nix-darwin/master";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     nur.url = "github:nix-community/NUR";
     ### --- System --- ###
@@ -25,13 +28,16 @@
     ### --- ESSENTIAL system modules --- ###
 
     ### --- Overlays and Applications --- ###
+    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     vscode-server.url = "github:nix-community/nixos-vscode-server";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    doom-emacs.url = "github:nix-community/nix-doom-emacs";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix/master";
+    catppuccin.url = "github:catppuccin/nix";
     hyprland.url = "github:hyprwm/Hyprland";
     nixcord.url = "github:KaylorBen/nixcord";
-    catppuccin.url = "github:catppuccin/nix";
 
     nixified-ai.url = "github:nixified-ai/flake";
 
