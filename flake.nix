@@ -65,7 +65,6 @@
     nixified-ai.inputs.nixpkgs.follows = "nixpkgs";
     nix2container.inputs.nixpkgs.follows = "nixpkgs";
     pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
-    meanvoid-overlay.inputs.nixpkgs.follows = "nixpkgs";
     doom-emacs.inputs.emacs-overlay.follows = "emacs-overlay";
     ### --- de-duplication --- ###
   };
