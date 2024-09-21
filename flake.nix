@@ -16,7 +16,6 @@
     nixpkgs-23_11.url = "github:nixos/nixpkgs/nixos-23.11"; # for ibus
     nixpkgs-23_05.url = "github:nixos/nixpkgs/nixos-23.05"; # for ibus
     ### --- nixpkgs channels --- ###
-    darwin.url = "github:lnl7/nix-darwin/master";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     nur.url = "github:nix-community/NUR";
     ### --- System --- ###
@@ -28,7 +27,6 @@
     ### --- ESSENTIAL system modules --- ###
 
     ### --- Overlays and Applications --- ###
-    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     vscode-server.url = "github:nix-community/nixos-vscode-server";
@@ -38,7 +36,6 @@
     catppuccin.url = "github:catppuccin/nix";
     hyprland.url = "github:hyprwm/Hyprland";
     nixcord.url = "github:KaylorBen/nixcord";
-
     nixified-ai.url = "github:nixified-ai/flake";
 
     # devenv dependencies
@@ -50,13 +47,10 @@
     nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     # Games
     aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
-    nix-gaming.url = "github:fufexan/nix-gaming/master";
 
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
     ### --- Overlays and Applications --- ###
 
     ### --- De-duplication --- ###
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
     doom-emacs.inputs.nixpkgs.follows = "nixpkgs";
@@ -78,7 +72,6 @@
       devenv,
       pre-commit-hooks,
       nixpkgs,
-      darwin,
       home-manager,
       catppuccin,
       hyprland,
@@ -100,8 +93,6 @@
       systems = [
         "x86_64-linux"
         "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
       ];
       perSystem =
         {
@@ -172,7 +163,7 @@
             ### ----------------FLAKE------------------- ###
 
             ### ----------------SYSTEM------------------- ###
-            inherit nixpkgs darwin;
+            inherit nixpkgs;
             ### ----------------SYSTEM------------------- ###
 
             ### ----------------MODULES & OVERLAYS------------------- ###

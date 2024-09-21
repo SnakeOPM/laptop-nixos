@@ -3,7 +3,6 @@
   inputs,
   path,
   nixpkgs,
-  darwin,
   sops-nix,
   agenix,
   home-manager,
@@ -19,7 +18,7 @@
 let
   homeManager = import ./homeManagerModules.nix {
     inherit lib inputs path;
-    inherit nixpkgs darwin;
+    inherit nixpkgs;
     inherit home-manager nur;
     inherit catppuccin spicetify-nix;
     # inherit system;
@@ -94,37 +93,6 @@ in
           };
         };
         modules = [ "${path}/hosts/${hostName}/configuration.nix" ] ++ sharedModules;
-      };
-
-    darwin =
-      {
-        hostName,
-        system,
-        useHomeManager ? false,
-        users ? [ ],
-        modules ? [ ],
-        ...
-      }:
-      let
-        hostname = hostName;
-        defaults = [ { config = cfg; } ] ++ modules;
-        sharedModules = lib.flatten [
-          (lib.optional useHomeManager (homeManagerModules.darwin hostname users system))
-          agenix.darwinModules.default
-          defaults
-        ];
-      in
-      darwin.lib.darwinSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs system hostname;
-          inherit path users;
-          inherit darwin nixpkgs;
-          host = {
-            inherit hostName;
-          };
-        };
-        modules = [ "${path}/hosts/darwin/${hostName}/configuration.nix" ] ++ sharedModules;
       };
   };
 }

@@ -6,11 +6,6 @@
       hyprshot
       home-manager
       thefuck
-      waybar
-      dunst
-      kitty
-      swww
-      rofi-wayland
       ;
   };
 }

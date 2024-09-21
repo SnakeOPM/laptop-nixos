@@ -1,7 +1,6 @@
 {
   lib,
   inputs,
-  darwin,
   home-manager,
   catppuccin,
   spicetify-nix,

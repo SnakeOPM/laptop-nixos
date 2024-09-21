@@ -4,7 +4,6 @@
   self,
   path,
   nixpkgs,
-  darwin,
   sops-nix,
   agenix,
   home-manager,
@@ -25,7 +24,7 @@ let
     ### ----------------FLAKE------------------- ###  
 
     ### ----------------SYSTEM------------------- ###
-    inherit nixpkgs darwin;
+    inherit nixpkgs;
     ### ----------------SYSTEM------------------- ###
 
     ### ----------------MODULES & OVERLAYS------------------- ###
@@ -47,6 +46,6 @@ in
     hostName = "LarinePortable";
     system = "x86_64-linux";
     useHomeManager = true;
-    users = [ "jalemi" ];
+    users = [ "larine" ];
   };
 }

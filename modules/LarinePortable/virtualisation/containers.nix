@@ -37,7 +37,7 @@
   systemd.timers."podman-auto-update".wantedBy = [ "timers.target" ];
   environment.systemPackages = [ pkgs.distrobox ];
   users.groups = {
-    docker.members = [ "jalemi" ];
-    podman.members = [ "jalemi" ];
+    docker.members = [ "larine" ];
+    podman.members = [ "larine" ];
   };
 }

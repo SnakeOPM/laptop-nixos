@@ -4,20 +4,20 @@
   environment.pathsToLink = [ "/share/zsh" ];
   users.mutableUsers = true;
   users.groups = {
-    jalemi.gid = config.users.users.jalemi.uid;
+    larine.gid = config.users.users.larine.uid;
   };
   users.users = {
     root = {
-      initialHashedPassword = "$6$zqnZey0npRPD86SN$r1TFkfRgRb4armgaeF1EZRIhrrKWd2AcQgQwEVf.tMKiM.jvdeEuEfk9eNLsYEriUtgAGB5AEUte7WlYCwN050";
+      initialHashedPassword = "$y$j9T$4TEnn2nI5.wvd0kfqc5Cm1$.9L97/RYhqf78lV3Yn23YlCIbbYCWMLV.iMzyZwSF7/";
     };
-    jalemi = {
+    larine = {
       isNormalUser = true;
       uid = 1000;
-      home = "/home/jalemi";
+      home = "/home/larine";
       description = "Salyami";
-      initialHashedPassword = "$6$RWbcQtwtADqataLn$tH3Zzp08yB5i1Q.LmR5qdrVU7u.xw0l4bMqMcU/kUNCv4U/wkXiSnyjg.7MGAvJdvCv5ndYYjIFj5dOnpgDBG0";
+      initialHashedPassword = "$y$j9T$4TEnn2nI5.wvd0kfqc5Cm1$.9L97/RYhqf78lV3Yn23YlCIbbYCWMLV.iMzyZwSF7/";
       extraGroups = [
-        "jalemi"
+        "larine"
         "wheel"
       ];
       shell = pkgs.zsh;

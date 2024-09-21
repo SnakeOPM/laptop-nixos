@@ -41,9 +41,9 @@
   };
 
   users.groups = {
-    kvm.members = [ "jalemi" ];
-    libvirtd.members = [ "jalemi" ];
-    qemu.members = [ "jalemi" ];
+    kvm.members = [ "larine" ];
+    libvirtd.members = [ "larine" ];
+    qemu.members = [ "larine" ];
   };
 
   environment.systemPackages = builtins.attrValues {
