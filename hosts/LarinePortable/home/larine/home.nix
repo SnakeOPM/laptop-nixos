@@ -39,6 +39,7 @@
         # Graphic
         krita
         qbittorrent
+        postman
         # neofetch modules/shared/settings 
         # spotify # home/shared/programs/spotify.nix
         # unrar installed by default
