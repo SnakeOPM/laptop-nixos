@@ -40,7 +40,6 @@ in
         "https://devenv.cachix.org" # devenv
         "https://nix-community.cachix.org" # nix-community e.g home-manager
         "https://cuda-maintainers.cachix.org" # cuda builds
-        "https://nix-gaming.cachix.org" # nix-gaming
         "https://ai.cachix.org" # nixified-ai
         "https://ezkea.cachix.org" # aagl
       ];
@@ -48,7 +47,6 @@ in
         "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=" # devenv
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" # nix-community e.g home-manager
         "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E=" # cuda builds
-        "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" # nix-gaming
         "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" # nixified-ai
         "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" # aagl
       ];
@@ -63,7 +61,9 @@ in
     /**
       https://github.com/DontEatOreo/nix-dotfiles/blob/2370a16f6555f0fadbe570aa9b2781ac97cc01d3/hosts/nixos/users/nyx/nix.nix#L5C5-L7C7
     */
-    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+    registry = (lib.mapAttrs (_: flake: { inherit flake; })) (
+      (lib.filterAttrs (_: lib.isType "flake")) inputs
+    );
   };
   /**
     # Add inputs to legacy (nix2) channels, making legacy nix commands consistent

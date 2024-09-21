@@ -80,7 +80,6 @@
       flatpaks,
       nur,
       aagl,
-      nix-gaming,
       spicetify-nix,
       vscode-server,
       ...
